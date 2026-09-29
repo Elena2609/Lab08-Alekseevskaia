@@ -76,3 +76,41 @@ while (true)
     Console.WriteLine("Неверный пароль, попробуйте снова");
 }
 Console.WriteLine($"Количество неудачных попыток: {counter}");
+
+//Знакомство с do-while
+Console.WriteLine();
+string answer;
+
+do
+{
+    Console.Write("Введите дату посещения (например, 01.09): ");
+    string date = Console.ReadLine();
+    Console.WriteLine($"Запись добавлена: {date}");
+
+    Console.Write("Добавить еще одну запись? (да/нет): ");
+    answer = Console.ReadLine();
+} while (answer == "да");
+
+Console.WriteLine("Дневник сохранён");
+
+//Самостоятельные задания 
+Console.WriteLine();
+Console.WriteLine("Задача А");
+int N = 7;
+int i = 1;
+while (i <= 10)
+{
+    Console.WriteLine($"{N} * {i} = {N * i}");
+    i++;
+}
+
+Console.WriteLine();
+Console.WriteLine("Задача Б");
+Console.WriteLine("Вводите имена учеников, для завершения введите слово конец: ");
+string name = Console.ReadLine();
+int count0 = 0;
+while (name != "конец") {
+    count0 += 1;
+    name = Console.ReadLine();
+}
+Console.WriteLine($"Количество имён: {count0}");
